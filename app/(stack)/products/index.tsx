@@ -2,7 +2,7 @@ import { View, Text, FlatList } from "react-native";
 import React from "react";
 import { Link, router } from "expo-router";
 import CustomButton from "../../components/custom-button";
-import { products } from "@/app/mock/products";
+import { products } from "@/app/mock/products.store";
 
 const ProductScreen = () => {
     return (

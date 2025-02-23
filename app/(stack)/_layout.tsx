@@ -4,7 +4,9 @@ import { Stack } from "expo-router";
 const StackLayout = () => {
     return (
         <Stack
+
             screenOptions={{
+                animation: 'fade_from_bottom',
                 headerShown: false,
                 headerStyle: {
                     backgroundColor: "#F0EEE6"
