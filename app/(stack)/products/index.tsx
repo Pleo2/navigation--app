@@ -1,9 +1,10 @@
-import { View, Text } from "react-native";
+import { View, Text, FlatList } from "react-native";
 import React from "react";
 import { Link, router } from "expo-router";
 import CustomButton from "../../components/custom-button";
+import { products } from "@/app/mock/products";
 
-const Products = () => {
+const ProductScreen = () => {
     return (
         <View className="mb-6">
             <Text className="text-6xl font-poppins-medium text-primary leading-normal">
@@ -12,7 +13,7 @@ const Products = () => {
             <View className="flex flex-col gap-2">
                 <CustomButton
                     color="primary"
-                    variant='contain'
+                    variant="contain"
                     onPress={() => router.push("/home")}
                 >
                     Inicio
@@ -34,8 +35,27 @@ const Products = () => {
                 </CustomButton>
             </View>
 
+            <FlatList
+                data={products}
+                keyExtractor={(item) => item.id}
+                renderItem={({item}) => <View className="mt-10">
+                <Text className="text-2xl font-work-black">{item.title}</Text>
+                <Text className="">{item.description}</Text>
+
+                <View className="flex flex-row justify-between mt-2">
+                  <Text className="font-work-black">{item.price}</Text>
+                  <Link
+                    href={`/(stack)/products/${item.id}`}
+                    className="text-primary"
+                  >
+                    Ver detalles
+                  </Link>
+                </View>
+              </View>
+                                        }
+            />
         </View>
     );
 };
 
-export default Products;
+export default ProductScreen;
