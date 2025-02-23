@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Colores base */
+        --color-background: #FAF9F5;
+        --color-foreground: #141413;
+
+        /* Colores principales */
+        --color-primary: #F0EEE6;
+        --color-secondary: #E3DACC;
+        --color-highlight: #EADBBC;
+        --color-contrast: #CC785C;
+
+        /* Colores de estado */
+        --color-success: #788c5d;
+        --color-error: #c46686;
+        --color-warning: #d4a27f;
+        --color-info: #6a98bc;
+
+        /* Colores de texto */
+        --color-text-primary: #141413;
+        --color-text-secondary: #FAF9F5;
+        --color-text-disabled: #b0aea5;
+        --color-link: #CC785C;
+
+        /* Espaciado */
+        --spacing-xs: 0.25rem;
+        --spacing-sm: 0.5rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 3rem;
+
+        /* Bordes */
+        --border-radius-md: 1rem;
+        --border-radius-lg: 1.35rem;
+
+        /* Sombras */
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+}
