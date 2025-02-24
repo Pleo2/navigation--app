@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { Link, router } from "expo-router";
-import CustomButton from "@/app/components/custom-button";
+import CustomButton from "@/components/custom-button";
 
 const Products = () => {
     return (
@@ -10,21 +10,21 @@ const Products = () => {
             <CustomButton
                 color="primary"
                 variant='contain'
-                onPress={() => router.push("/tabs/(stack)/home")}
+                onPress={() => router.push("/drawer/(tabs)/(stack)/home")}
             >
                 Inicio
             </CustomButton>
             <CustomButton
                 color="primary"
                 variant='contain'
-                onPress={() => router.push("/tabs/(stack)/products")}
+                onPress={() => router.push("/drawer/(tabs)/(stack)/products")}
             >
                 Productos
             </CustomButton>
             <CustomButton
                 color="primary"
                 variant="contain"
-                onPress={() => router.push("/tabs/(stack)/profile")}
+                onPress={() => router.push("/drawer/(tabs)/(stack)/profile")}
             >
                 Perfil
             </CustomButton>

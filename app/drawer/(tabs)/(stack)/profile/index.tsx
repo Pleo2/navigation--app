@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { Link, router } from "expo-router";
-import CustomButton from "@/app/components/custom-button";
+import CustomButton from "@/components/custom-button";
 
 const Profile = () => {
     return (
@@ -10,14 +10,14 @@ const Profile = () => {
             <CustomButton
                 color="primary"
                 variant='contain'
-                onPress={() => router.push("/tabs/(stack)/home")}
+                onPress={() => router.push("/drawer/(tabs)/(stack)/home")}
             >
                 Inicio
             </CustomButton>
             <CustomButton
                 color="primary"
                 variant="contain"
-                onPress={() => router.push("/tabs/(stack)/products")}
+                onPress={() => router.push("/drawer/(tabs)/(stack)/products")}
             >
                 Productos
             </CustomButton>
@@ -25,7 +25,7 @@ const Profile = () => {
             <CustomButton
                 color="primary"
                 variant="contain"
-                onPress={() => router.push("/tabs/(stack)/settings")}
+                onPress={() => router.push("/drawer/(tabs)/(stack)/settings")}
             >
                 Ajuste de Pantalla
             </CustomButton>

@@ -1,24 +1,29 @@
 import { View, Text, FlatList } from "react-native";
 import React from "react";
-import { Link, router } from "expo-router";
-import CustomButton from "@/app/components/custom-button";
-import { products } from "@/app/mock/products.store";
+import { Link, router, useNavigation } from "expo-router";
+import CustomButton from "@/components/custom-button";
+import { products } from "@/mock/products.store";
+import { DrawerActions } from "@react-navigation/native";
 
 const ProductScreen = () => {
+    const navigation = useNavigation();
+    const ontogleDrawer = () => {
+        navigation.dispatch(DrawerActions.toggleDrawer);
+    };
     return (
         <View className="flex-1 bg-primary-background">
             <View className="flex flex-col gap-2">
                 <CustomButton
                     color="primary"
                     variant="contain"
-                    onPress={() => router.push("/tabs/(stack)/home")}
+                    onPress={() => router.push("/drawer/(tabs)/(stack)/home")}
                 >
                     Inicio
                 </CustomButton>
                 <CustomButton
                     color="primary"
                     variant="contain"
-                    onPress={() => router.push("/tabs/(stack)/profile")}
+                    onPress={() => router.push("/drawer/(tabs)/(stack)/profile")}
                 >
                     Perfil
                 </CustomButton>
@@ -26,9 +31,16 @@ const ProductScreen = () => {
                 <CustomButton
                     color="primary"
                     variant="contain"
-                    onPress={() => router.push("/tabs/(stack)/settings")}
+                    onPress={() => router.push("/drawer/(tabs)/(stack)/settings")}
                 >
                     Ajustes de Pantalla
+                </CustomButton>
+                <CustomButton
+                    color="secondary"
+                    variant="contain"
+                    onPress={ontogleDrawer}
+                >
+                    abrir menu
                 </CustomButton>
             </View>
 
@@ -45,12 +57,12 @@ const ProductScreen = () => {
                         </Text>
 
                         <View className="flex flex-row justify-between mt-2">
-                            <Text className="font-space-grotesk-bold text-primary text-2xl leading-relaxed flex
+                            <Text className="font-space-grotesk-bold text-primary text-xl leading-relaxed flex
                             items-center justify-center">
                                 $ {item.price}
                             </Text>
                             <Link
-                                href={`/tabs/(stack)/products/${item.id}`}
+                                href={`/drawer/(tabs)/(stack)/products/${item.id}`}
                                 className="text-primary font-space-grotesk-bold"
                             >
                                 Ver detalles

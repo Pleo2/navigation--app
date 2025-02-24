@@ -1,20 +1,25 @@
-import { SafeAreaView, StatusBar, StyleSheet, View, Platform } from "react-native";
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import "./style/global.css";
+import {
+    SafeAreaView,
+    StatusBar,
+    StyleSheet,
+    View,
+    Platform
+} from "react-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { Drawer } from "expo-router/drawer";
+import "@/style/global.css";
 import { Slot, SplashScreen } from "expo-router";
 import { useFonts } from "expo-font";
 import React, { useEffect } from "react";
-import * as NavigationBar from 'expo-navigation-bar';
-import { Colors } from "./constanst/constanst";
-import { Drawer } from 'expo-router/drawer';
-
+import * as NavigationBar from "expo-navigation-bar";
+import { Colors } from "../constanst/constanst";
 
 SplashScreen.preventAutoHideAsync();
 
-const isAndroid = Platform.OS === 'android';
+const isAndroid = Platform.OS === "android";
 
 if (isAndroid) {
-  NavigationBar.setBackgroundColorAsync(Colors.primary);
+    NavigationBar.setBackgroundColorAsync(Colors.primary);
 }
 
 const RootLayout = () => {
@@ -42,12 +47,18 @@ const RootLayout = () => {
         if (!fontLoaded && !error) null;
     }, [fontLoaded, error]);
 
-    return <Slot/>
-                 {/* <GestureHandlerRootView className="flex-1"> */}
-                    {/* <Drawer /> */}
-                    // <Slot/>
-                    {/* <Stack/> */}
-                 {/* </GestureHandlerRootView> */}
+    return (
+        <GestureHandlerRootView className="flex-1">
+            <Slot/>
+        </GestureHandlerRootView>
+    );
+
+    {
+        /*
+        return <Slot/>
+        return <Stack/>
+        */
+    }
 };
 
 export default RootLayout;

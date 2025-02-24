@@ -1,4 +1,4 @@
-import { products } from "@/app/mock/products.store";
+import { products } from "@/mock/products.store";
 import { Redirect, useLocalSearchParams } from "expo-router";
 import { View, Text } from "react-native";
 const ProductScreen = () => {
