@@ -6,7 +6,7 @@ import { products } from "@/app/mock/products.store";
 
 const ProductScreen = () => {
     return (
-        <View className="flex-1">
+        <View className="flex-1 bg-primary-background">
             <View className="flex flex-col gap-2">
                 <CustomButton
                     color="primary"

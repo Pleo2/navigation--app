@@ -11,7 +11,7 @@ const ProductScreen = () => {
     }
 
     return (
-        <View className="mt-2 mx-8 flex-1">
+        <View className="mt-2 mx-8 flex-1 bg-primary-background">
             <Text className="text-2xl font-poppins-medium">
                 {product.title}
             </Text>

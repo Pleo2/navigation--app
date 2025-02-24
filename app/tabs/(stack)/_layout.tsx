@@ -9,13 +9,13 @@ const StackLayout = () => {
                 animation: 'fade_from_bottom',
                 headerShown: true,
                 headerStyle: {
-                    backgroundColor: Colors.background,
+                    backgroundColor: Colors.primary,
                 },
                 headerTitleStyle: {
                     fontFamily: 'SpaceGrotesk-Bold'
                 },
                 statusBarStyle: "dark",
-                statusBarBackgroundColor: Colors.background,
+                statusBarBackgroundColor: Colors.primary,
                 headerShadowVisible: false,
                 contentStyle: {
                     flex: 1

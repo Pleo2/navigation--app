@@ -42,19 +42,12 @@ const RootLayout = () => {
         if (!fontLoaded && !error) null;
     }, [fontLoaded, error]);
 
-    return (
-
-        <View className="bg-background flex-1">
-                 <SafeAreaView className="flex-1 bg-background h-full w-full">
+    return <Slot/>
                  {/* <GestureHandlerRootView className="flex-1"> */}
                     {/* <Drawer /> */}
-                    <Slot/>
+                    // <Slot/>
                     {/* <Stack/> */}
                  {/* </GestureHandlerRootView> */}
-                 </SafeAreaView>
-            <StatusBar barStyle={"dark-content"} backgroundColor={Colors.primary}/>
-        </View>
-    );
 };
 
 export default RootLayout;
