@@ -25,7 +25,7 @@ const CustomButton = React.forwardRef(
             if (variant === "outline")
                 return (
                     <Pressable
-                        className={`px-2 py-1 w-1/2 active:opacity-90 active:scale-95`}
+                        className={`px-2 py-1 w-4/5 active:opacity-90 active:scale-95`}
                         onPress={onPress}
                         onLongPress={onLongPress}
                         ref={ref}
@@ -42,7 +42,7 @@ const CustomButton = React.forwardRef(
             if (variant === "unstyled")
                 return (
                     <Pressable
-                        className={`w-1/2`}
+                        className={`w-4/5`}
                         onPress={onPress}
                         onLongPress={onLongPress}
                         ref={ref}
@@ -58,7 +58,7 @@ const CustomButton = React.forwardRef(
 
         return (
             <Pressable
-                className={`${btnColor[0]} mx-auto w-2/3 px-4 py-2 rounded-md active:opacity-90 active:scale-95`}
+                className={`${btnColor[0]} mx-auto w-4/5 px-4 py-2 rounded-md active:opacity-90 active:scale-95`}
                 onPress={onPress}
                 onLongPress={onLongPress}
                 ref={ref}

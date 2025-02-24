@@ -7,13 +7,28 @@ import { Colors } from '../constanst/constanst';
 const TabsLayout = () => {
   return (
     <Tabs screenOptions={{
-        tabBarActiveTintColor: Colors.contrast
+        tabBarStyle: {
+            backgroundColor: Colors.primary
+        },
+        headerShown: false,
+        tabBarActiveTintColor: Colors.contrast,
+        tabBarLabelStyle: {
+            fontFamily: 'SpaceGrotesk-Bold'
+        }
+        // tabBarActiveBackgroundColor: Colors.foreground // da color al icono activo
         }}>
-    <Tabs.Screen
+     <Tabs.Screen
       name="home/index"
       options={{
         title: 'Home',
         tabBarIcon: ({ color }) => <Ionicons size={28} name="home-outline" color={color} />,
+      }}
+    />
+    <Tabs.Screen
+      name="(stack)"
+      options={{
+        title: 'stack',
+        tabBarIcon: ({ color }) => <Ionicons size={28} name="file-tray-stacked-outline" color={color} />,
       }}
     />
     <Tabs.Screen

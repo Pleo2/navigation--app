@@ -1,17 +1,20 @@
 import { SafeAreaView, StatusBar, StyleSheet, View, Platform } from "react-native";
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import "./global.css";
 import { Slot, SplashScreen } from "expo-router";
 import { useFonts } from "expo-font";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import * as NavigationBar from 'expo-navigation-bar';
+import { Colors } from "./constanst/constanst";
+import { Drawer } from 'expo-router/drawer';
+
 
 SplashScreen.preventAutoHideAsync();
-
 
 const isAndroid = Platform.OS === 'android';
 
 if (isAndroid) {
-  NavigationBar.setBackgroundColorAsync('#F0EEE6');
+  NavigationBar.setBackgroundColorAsync(Colors.primary);
 }
 
 const RootLayout = () => {
@@ -40,11 +43,16 @@ const RootLayout = () => {
     }, [fontLoaded, error]);
 
     return (
+
         <View className="bg-background flex-1">
-            <SafeAreaView className="flex-1 bg-background h-full w-full">
-                <Slot />
-            </SafeAreaView>
-            <StatusBar barStyle={"dark-content"} backgroundColor={"#F0EEE6"}/>
+                 <SafeAreaView className="flex-1 bg-background h-full w-full">
+                 <GestureHandlerRootView className="flex-1">
+                    <Drawer />
+                    {/* <Slock/> */}
+                    {/* <Stack/> */}
+                 </GestureHandlerRootView>
+                 </SafeAreaView>
+            <StatusBar barStyle={"dark-content"} backgroundColor={Colors.primary}/>
         </View>
     );
 };

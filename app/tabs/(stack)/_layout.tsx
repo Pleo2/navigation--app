@@ -7,9 +7,12 @@ const StackLayout = () => {
 
             screenOptions={{
                 animation: 'fade_from_bottom',
-                headerShown: false,
+                headerShown: true,
                 headerStyle: {
-                    backgroundColor: "#F0EEE6"
+                    backgroundColor: "#F0EEE6",
+                },
+                headerTitleStyle: {
+                    fontFamily: 'SpaceGrotesk-Bold'
                 },
                 statusBarStyle: "dark",
                 statusBarBackgroundColor: "#F0EEE6",
@@ -41,6 +44,13 @@ const StackLayout = () => {
                 name="settings/index"
                 options={{
                     title: "Ajustes de Pantalla"
+                }}
+            />
+
+            <Stack.Screen
+                name="products/[id]"
+                options={{
+                    title: "Producto"
                 }}
             />
         </Stack>

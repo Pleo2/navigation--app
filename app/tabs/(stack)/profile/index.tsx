@@ -6,21 +6,18 @@ import CustomButton from "@/app/components/custom-button";
 const Profile = () => {
     return (
         <View className="mb-6">
-        <Text className="text-6xl font-poppins-medium text-primary leading-normal">
-            Perfil
-        </Text>
         <View className="flex flex-col gap-2">
             <CustomButton
                 color="primary"
                 variant='contain'
-                onPress={() => router.push("/home")}
+                onPress={() => router.push("/tabs/(stack)/home")}
             >
                 Inicio
             </CustomButton>
             <CustomButton
                 color="primary"
                 variant="contain"
-                onPress={() => router.push("/products")}
+                onPress={() => router.push("/tabs/(stack)/products")}
             >
                 Productos
             </CustomButton>
@@ -28,7 +25,7 @@ const Profile = () => {
             <CustomButton
                 color="primary"
                 variant="contain"
-                onPress={() => router.push("/settings")}
+                onPress={() => router.push("/tabs/(stack)/settings")}
             >
                 Ajuste de Pantalla
             </CustomButton>
