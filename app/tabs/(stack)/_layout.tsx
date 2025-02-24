@@ -1,24 +1,24 @@
 import React from "react";
 import { Stack } from "expo-router";
+import { Colors } from "@/app/constanst/constanst";
 
 const StackLayout = () => {
     return (
         <Stack
-
             screenOptions={{
                 animation: 'fade_from_bottom',
                 headerShown: true,
                 headerStyle: {
-                    backgroundColor: "#F0EEE6",
+                    backgroundColor: Colors.background,
                 },
                 headerTitleStyle: {
                     fontFamily: 'SpaceGrotesk-Bold'
                 },
                 statusBarStyle: "dark",
-                statusBarBackgroundColor: "#F0EEE6",
+                statusBarBackgroundColor: Colors.background,
                 headerShadowVisible: false,
                 contentStyle: {
-                    backgroundColor: "#F0EEE6",
+                    flex: 1
                 }
             }}
         >

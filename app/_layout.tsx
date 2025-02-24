@@ -1,6 +1,6 @@
 import { SafeAreaView, StatusBar, StyleSheet, View, Platform } from "react-native";
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import "./global.css";
+import "./style/global.css";
 import { Slot, SplashScreen } from "expo-router";
 import { useFonts } from "expo-font";
 import React, { useEffect } from "react";
@@ -46,11 +46,11 @@ const RootLayout = () => {
 
         <View className="bg-background flex-1">
                  <SafeAreaView className="flex-1 bg-background h-full w-full">
-                 <GestureHandlerRootView className="flex-1">
-                    <Drawer />
-                    {/* <Slock/> */}
+                 {/* <GestureHandlerRootView className="flex-1"> */}
+                    {/* <Drawer /> */}
+                    <Slot/>
                     {/* <Stack/> */}
-                 </GestureHandlerRootView>
+                 {/* </GestureHandlerRootView> */}
                  </SafeAreaView>
             <StatusBar barStyle={"dark-content"} backgroundColor={Colors.primary}/>
         </View>

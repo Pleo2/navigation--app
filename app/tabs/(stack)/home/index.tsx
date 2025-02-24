@@ -5,8 +5,8 @@ import CustomButton from "@/app/components/custom-button";
 
 const HomeScreen = () => {
     return (
-        <View className="mb-6">
-            <View className="flex flex-col gap-2">
+        <View className="flex-1 ">
+            <View className="flex-1 gap-2 ">
                 <CustomButton
                     color="primary"
                     variant='contain'

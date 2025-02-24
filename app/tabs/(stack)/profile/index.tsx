@@ -5,7 +5,7 @@ import CustomButton from "@/app/components/custom-button";
 
 const Profile = () => {
     return (
-        <View className="mb-6">
+        <View className="flex-1">
         <View className="flex flex-col gap-2">
             <CustomButton
                 color="primary"

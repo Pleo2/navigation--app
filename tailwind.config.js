@@ -30,8 +30,8 @@ module.exports = {
         colors: {
             background: 'var(--color-background)',
             foreground: 'var(--color-foreground)',
-            primary: 'var(--color-primary)',
-            secondary: 'var(--color-secondary)',
+            'primary-background': 'var(--color-primary)',
+            'secondary-background': 'var(--color-secondary)',
             highlight: 'var(--color-highlight)',
             contrast: 'var(--color-contrast)',
             success: 'var(--color-success)',
